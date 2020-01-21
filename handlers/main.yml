@@ -1,0 +1,16 @@
+---
+  - name: start auditd
+    systemd:
+      name: auditd
+      enabled: yes
+      state: started
+
+  - name: restart auditd
+    systemd:
+      name: auditd
+      state: restarted
+
+  - name: stop auditd
+    systemd:
+      name: auditd
+      state: stopped

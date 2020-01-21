@@ -1,0 +1,9 @@
+---
+  - name: centos auditd install
+    include: centos_auditd.yml
+    when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+
+  - name: ubuntu auditd install
+    include: ubuntu_auditd.yml
+    when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+

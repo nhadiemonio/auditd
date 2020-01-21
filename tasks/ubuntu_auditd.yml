@@ -1,0 +1,7 @@
+---
+  - name: install ubuntu auditd
+    apt:
+      name: auditd
+      state: latest
+    notify: restart auditd
+
